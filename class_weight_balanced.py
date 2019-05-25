@@ -36,7 +36,6 @@ y_train_arr=np.array(y_train['Outcome'])
 X_train_arr=np.array(X_train)
 
 #random forest
-weights=np.linspace(0.05,0.95,20)
 clf = RandomForestClassifier(n_estimators=100,max_depth=5,random_state=0,oob_score=True,class_weight='balanced') 
 clf.fit(X_train,y_train.values.ravel())
 y_pred=clf.predict(X_test)
